@@ -1,0 +1,134 @@
+From 50018f4795c2ac23ce4527ac4edd21fae2939f0e Mon Sep 17 00:00:00 2001
+From: zhaofeng256 <zhaofeng256@foxmail.com>
+Date: Sat, 23 Mar 2019 21:48:05 +0800
+Subject: [PATCH 10/13] update .config
+
+Signed-off-by: zhaofeng256 <zhaofeng256@foxmail.com>
+---
+ .config | 32 ++++----------------------------
+ 1 file changed, 4 insertions(+), 28 deletions(-)
+
+diff --git a/.config b/.config
+index f7504ce4..7fd9ec84 100644
+--- a/.config
++++ b/.config
+@@ -890,14 +890,8 @@ CONFIG_MTD_NAND_S3C2410=y
+ #
+ # CONFIG_MTD_LPDDR is not set
+ # CONFIG_MTD_UBI is not set
+-CONFIG_PARPORT=y
+-CONFIG_PARPORT_PC=m
+-# CONFIG_PARPORT_GSC is not set
+-CONFIG_PARPORT_AX88796=m
+-CONFIG_PARPORT_1284=y
+-CONFIG_PARPORT_NOT_PC=y
++# CONFIG_PARPORT is not set
+ CONFIG_BLK_DEV=y
+-# CONFIG_PARIDE is not set
+ # CONFIG_BLK_DEV_COW_COMMON is not set
+ CONFIG_BLK_DEV_LOOP=y
+ CONFIG_BLK_DEV_LOOP_MIN_COUNT=8
+@@ -996,8 +990,6 @@ CONFIG_SCSI_LOWLEVEL=y
+ # CONFIG_ISCSI_BOOT_SYSFS is not set
+ # CONFIG_LIBFC is not set
+ # CONFIG_LIBFCOE is not set
+-# CONFIG_SCSI_PPA is not set
+-# CONFIG_SCSI_IMM is not set
+ # CONFIG_SCSI_DEBUG is not set
+ # CONFIG_SCSI_DH is not set
+ # CONFIG_SCSI_OSD_INITIATOR is not set
+@@ -1027,7 +1019,6 @@ CONFIG_ETHERNET=y
+ CONFIG_DM9000=y
+ # CONFIG_DM9000_FORCE_SIMPLE_PHY_POLL is not set
+ # CONFIG_DNET is not set
+-# CONFIG_NET_VENDOR_DLINK is not set
+ # CONFIG_NET_VENDOR_FARADAY is not set
+ # CONFIG_NET_VENDOR_INTEL is not set
+ # CONFIG_NET_VENDOR_MARVELL is not set
+@@ -1038,7 +1029,6 @@ CONFIG_DM9000=y
+ # CONFIG_NET_VENDOR_STMICRO is not set
+ # CONFIG_PHYLIB is not set
+ # CONFIG_MICREL_KS8995MA is not set
+-# CONFIG_PLIP is not set
+ # CONFIG_PPP is not set
+ # CONFIG_SLIP is not set
+ 
+@@ -1118,7 +1108,6 @@ CONFIG_INPUT_GPIO_ROTARY_ENCODER=m
+ #
+ CONFIG_SERIO=y
+ CONFIG_SERIO_SERPORT=y
+-# CONFIG_SERIO_PARKBD is not set
+ # CONFIG_SERIO_RAW is not set
+ # CONFIG_SERIO_ALTERA_PS2 is not set
+ # CONFIG_SERIO_PS2MULT is not set
+@@ -1146,15 +1135,7 @@ CONFIG_DEVKMEM=y
+ #
+ # Serial drivers
+ #
+-CONFIG_SERIAL_8250=y
+-CONFIG_SERIAL_8250_CONSOLE=y
+-CONFIG_SERIAL_8250_NR_UARTS=8
+-CONFIG_SERIAL_8250_RUNTIME_UARTS=4
+-CONFIG_SERIAL_8250_EXTENDED=y
+-CONFIG_SERIAL_8250_MANY_PORTS=y
+-CONFIG_SERIAL_8250_SHARE_IRQ=y
+-# CONFIG_SERIAL_8250_DETECT_IRQ is not set
+-# CONFIG_SERIAL_8250_RSA is not set
++# CONFIG_SERIAL_8250 is not set
+ 
+ #
+ # Non-8250 serial port support
+@@ -1171,8 +1152,6 @@ CONFIG_SERIAL_CORE_CONSOLE=y
+ # CONFIG_SERIAL_ALTERA_JTAGUART is not set
+ # CONFIG_SERIAL_ALTERA_UART is not set
+ # CONFIG_SERIAL_XILINX_PS_UART is not set
+-# CONFIG_PRINTER is not set
+-CONFIG_PPDEV=y
+ # CONFIG_HVC_DCC is not set
+ # CONFIG_IPMI_HANDLER is not set
+ CONFIG_HW_RANDOM=y
+@@ -1207,7 +1186,6 @@ CONFIG_I2C_SIMTEC=y
+ # External I2C/SMBus adapter drivers
+ #
+ # CONFIG_I2C_DIOLAN_U2C is not set
+-# CONFIG_I2C_PARPORT is not set
+ # CONFIG_I2C_PARPORT_LIGHT is not set
+ # CONFIG_I2C_TINY_USB is not set
+ 
+@@ -1226,7 +1204,6 @@ CONFIG_SPI_MASTER=y
+ #
+ # CONFIG_SPI_ALTERA is not set
+ CONFIG_SPI_BITBANG=m
+-# CONFIG_SPI_BUTTERFLY is not set
+ CONFIG_SPI_GPIO=m
+ # CONFIG_SPI_OC_TINY is not set
+ # CONFIG_SPI_PXA2XX_PCI is not set
+@@ -1593,7 +1570,7 @@ CONFIG_USB=y
+ CONFIG_USB_DEVICEFS=y
+ CONFIG_USB_DEVICE_CLASS=y
+ # CONFIG_USB_DYNAMIC_MINORS is not set
+-CONFIG_USB_MON=y
++# CONFIG_USB_MON is not set
+ # CONFIG_USB_WUSB_CBAF is not set
+ 
+ #
+@@ -1653,7 +1630,6 @@ CONFIG_USB_MICROTEK=m
+ #
+ # USB port drivers
+ #
+-CONFIG_USB_USS720=m
+ # CONFIG_USB_SERIAL is not set
+ 
+ #
+@@ -2056,7 +2032,7 @@ CONFIG_SCHED_DEBUG=y
+ # CONFIG_DEBUG_RT_MUTEXES is not set
+ # CONFIG_RT_MUTEX_TESTER is not set
+ # CONFIG_DEBUG_SPINLOCK is not set
+-# CONFIG_DEBUG_MUTEXES is not set
++CONFIG_DEBUG_MUTEXES=y
+ # CONFIG_DEBUG_LOCK_ALLOC is not set
+ # CONFIG_PROVE_LOCKING is not set
+ # CONFIG_SPARSE_RCU_POINTER is not set
+-- 
+2.17.1
+

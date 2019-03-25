@@ -1,0 +1,26 @@
+From e4ca2d995ef650c4b410a359bda69995179e2f5c Mon Sep 17 00:00:00 2001
+From: zhaofeng256 <zhaofeng256@foxmail.com>
+Date: Fri, 22 Mar 2019 17:41:13 +0800
+Subject: [PATCH 02/13] fix compile err
+
+Signed-off-by: zhaofeng256 <zhaofeng256@foxmail.com>
+---
+ kernel/timeconst.pl | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/kernel/timeconst.pl b/kernel/timeconst.pl
+index eb51d76e..063fcc0b 100644
+--- a/kernel/timeconst.pl
++++ b/kernel/timeconst.pl
+@@ -370,7 +370,7 @@ if ($hz eq '--can') {
+ 	}
+ 
+ 	@val = @{$canned_values{$hz}};
+-	if (!defined(@val)) {
++	if (!(@val)) {
+ 		@val = compute_values($hz);
+ 	}
+ 	output($hz, @val);
+-- 
+2.17.1
+

@@ -1,0 +1,26 @@
+From 907b77a10a5f1e8e2ea6250958d9aa8e6c144f40 Mon Sep 17 00:00:00 2001
+From: zhaofeng256 <zhaofeng256@foxmail.com>
+Date: Sat, 23 Mar 2019 19:39:44 +0800
+Subject: [PATCH 09/13] add cmd
+
+Signed-off-by: zhaofeng256 <zhaofeng256@foxmail.com>
+---
+ cmd | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/cmd b/cmd
+index 9a634cd6..5928351e 100644
+--- a/cmd
++++ b/cmd
+@@ -2,3 +2,8 @@ export PATH=$PATH:/home/zf/work/cross_compile/4.3.2/bin/
+ export ARCH=arm
+ export CROSS_COMPILE=arm-linux-
+ 
++make ARCH=arm CROSS_COMPILE=arm-linux-  menuconfig
++
++sudo cp arch/arm/boot/uImage /tftp/uImage_new
++
++
+-- 
+2.17.1
+

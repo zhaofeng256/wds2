@@ -1,0 +1,37 @@
+From ba65ac070246d9cca618bb7a1ae853041ebe42a6 Mon Sep 17 00:00:00 2001
+From: zhaofeng256 <zhaofeng256@foxmail.com>
+Date: Sat, 23 Mar 2019 19:37:23 +0800
+Subject: [PATCH 06/13] config add yaffs
+
+Signed-off-by: zhaofeng256 <zhaofeng256@foxmail.com>
+---
+ .config | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+
+diff --git a/.config b/.config
+index 8b161517..f7504ce4 100644
+--- a/.config
++++ b/.config
+@@ -1924,6 +1924,19 @@ CONFIG_TMPFS_XATTR=y
+ CONFIG_CONFIGFS_FS=m
+ CONFIG_MISC_FILESYSTEMS=y
+ # CONFIG_HFSPLUS_FS is not set
++CONFIG_YAFFS_FS=y
++CONFIG_YAFFS_YAFFS1=y
++# CONFIG_YAFFS_9BYTE_TAGS is not set
++# CONFIG_YAFFS_DOES_ECC is not set
++CONFIG_YAFFS_YAFFS2=y
++CONFIG_YAFFS_AUTO_YAFFS2=y
++# CONFIG_YAFFS_DISABLE_TAGS_ECC is not set
++# CONFIG_YAFFS_ALWAYS_CHECK_CHUNK_ERASED is not set
++# CONFIG_YAFFS_EMPTY_LOST_AND_FOUND is not set
++# CONFIG_YAFFS_DISABLE_BLOCK_REFRESHING is not set
++# CONFIG_YAFFS_DISABLE_BACKGROUND is not set
++# CONFIG_YAFFS_DISABLE_BAD_BLOCK_MARKING is not set
++CONFIG_YAFFS_XATTR=y
+ CONFIG_JFFS2_FS=y
+ CONFIG_JFFS2_FS_DEBUG=0
+ CONFIG_JFFS2_FS_WRITEBUFFER=y
+-- 
+2.17.1
+

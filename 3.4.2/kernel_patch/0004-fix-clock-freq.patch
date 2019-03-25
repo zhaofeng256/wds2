@@ -1,0 +1,26 @@
+From 8787e1afdc7d4b32e7b953fe595abb232db763f7 Mon Sep 17 00:00:00 2001
+From: zhaofeng256 <zhaofeng256@foxmail.com>
+Date: Sat, 23 Mar 2019 19:28:37 +0800
+Subject: [PATCH 04/13] fix clock freq
+
+Signed-off-by: zhaofeng256 <zhaofeng256@foxmail.com>
+---
+ arch/arm/mach-s3c24xx/mach-smdk2440.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/arch/arm/mach-s3c24xx/mach-smdk2440.c b/arch/arm/mach-s3c24xx/mach-smdk2440.c
+index 83a1036d..b92c2bd5 100644
+--- a/arch/arm/mach-s3c24xx/mach-smdk2440.c
++++ b/arch/arm/mach-s3c24xx/mach-smdk2440.c
+@@ -162,7 +162,7 @@ static struct platform_device *smdk2440_devices[] __initdata = {
+ static void __init smdk2440_map_io(void)
+ {
+ 	s3c24xx_init_io(smdk2440_iodesc, ARRAY_SIZE(smdk2440_iodesc));
+-	s3c24xx_init_clocks(16934400);
++	s3c24xx_init_clocks(12000000);
+ 	s3c24xx_init_uarts(smdk2440_uartcfgs, ARRAY_SIZE(smdk2440_uartcfgs));
+ }
+ 
+-- 
+2.17.1
+
